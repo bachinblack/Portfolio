@@ -1,0 +1,24 @@
+.p-list {
+    overflow-x: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.proj {
+    margin: 10px 15px;
+    text-align: left;
+}
+
+.proj p {
+    height: 72px;
+    overflow-y: auto;
+}
+
+.proj .card-title {
+    height: 48px;
+}
+
+.card-img {
+    height: 250px;
+    object-fit: cover;
+}
