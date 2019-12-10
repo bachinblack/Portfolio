@@ -18,7 +18,7 @@ class Home extends React.Component {
     render() {
         return (
             <>
-                <img src="./bg.jpg" className="background" alt="logo" />
+                <img src="./backgrounds/home.jpg" className="background" alt="logo" />
                 <div className="intro-body">
                 {/* ABT Contacts in or out of .intro? */}
                 <Contact />
@@ -26,7 +26,7 @@ class Home extends React.Component {
                         <h2>Hi everyone!</h2>
                         <h2>My name is Philippe Bouttereux</h2>
                         <h2>And this is my portfolio!</h2>
-                        <a target="_blank" href="https://drive.google.com/file/d/12_5J-5AcHJqjtWy2IxvFkQDpyKbUGBlK/view?usp=sharing"><h2>You can download my resume here</h2></a>
+                        <a href="https://drive.google.com/file/d/12_5J-5AcHJqjtWy2IxvFkQDpyKbUGBlK/view?usp=sharing"><h2>You can download my resume here</h2></a>
                         <h2>Or you can click the button below to start the tour</h2>
                     </div>
                     <a className="navigator" href="#projects"><FontAwesomeIcon icon={faArrowDown} size="4x" /></a>

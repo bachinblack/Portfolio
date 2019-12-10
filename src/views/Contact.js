@@ -18,8 +18,7 @@ function fallbackCopyTextToClipboard(text) {
     textArea.select();
 
     try {
-        var successful = document.execCommand('copy');
-        var msg = successful ? 'successful' : 'unsuccessful';
+        document.execCommand('copy');
         NotificationManager.success('Copied on your clipboard !');
     } catch (err) {
         NotificationManager.error('Failed to copy on your clipboard !');
@@ -64,7 +63,7 @@ export default function Contact() {
         <div>
             <p>
                 {links.map((el, id) => (
-                    <a target="_blank" className="link" href={el.link} key={id}>
+                    <a target="_blank" rel="noopener noreferrer" className="link" href={el.link} key={id}>
                         <FontAwesomeIcon icon={el.icon} size="2x" />
                     </a>
                 ))}
