@@ -1,0 +1,22 @@
+.f-row {
+    background-color: #086788;
+    color: #ccc;
+    width: 100%;
+    margin: 0;
+    height: 250px;
+
+}
+
+footer .col-lg-6 {
+    display: table;
+    height: 100%;
+}
+
+footer > .col-lg-6 > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+footer h2 {
+    color: $bright;
+}

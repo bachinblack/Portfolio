@@ -1,0 +1,107 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+}
+
+h2 {
+  color: $dark;
+  transition: all .4s;
+  margin-bottom: .7rem;
+}
+
+a:hover { text-decoration: none; }
+
+a > h2 {
+  color: lighten($dark, 20%);
+}
+
+a > h2:hover {
+  color: darken($dark, 5%);
+}
+
+  /**************/
+ /*   Navbar   */
+/**************/
+
+
+.bg-light {
+  background-color: transparent !important;
+}
+
+.navbar {
+  transition: all .8s;
+}
+
+.form-control:focus {
+  border-color: teal;
+  box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, .25);
+}
+
+  /***************/
+ /*  Scrollers  */
+/***************/
+
+.navigator {
+  transition: all .5s;
+  color: $bright;
+  /* color: teal; */
+  background-color: $dark;
+  padding: 5px 10px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.navigator:hover {
+  color: $dark;
+  background-color: $bright;
+  /* background-color: teal; */
+  border-radius: 10%;
+}
+
+.scrollup {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+}
+
+  /**************/
+ /*  ScrolBar  */
+/**************/
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #50514F;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(63, 65, 62);
+}
+
+  /**************/
+ /*  Sections  */
+/**************/
+
+
+section {
+  height: 100vh;
+  background-image: url("/street.jpg");
+}
+
+.title {
+  width: 100%;
+  padding: 10px 0;
+  background-color: $middle;
+  color: $bright;
+}

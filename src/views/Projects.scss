@@ -1,0 +1,58 @@
+.p-list {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 23vh 0 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .p-list {
+        overflow-x: auto !important;
+    }
+}
+
+.p-list:hover {
+    overflow-x: auto;
+}
+
+.proj {
+    // margin: 10px 15px;
+    text-align: left;
+}
+
+
+.proj .card-title {
+    height: 48px;
+}
+
+.card-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card,
+.card-img {
+    border: 0;
+    border-radius: 0;
+}
+
+
+.card-body {
+    color: $dark;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    pointer-events: none;
+    // display: none;
+    opacity: 0;
+    font-weight: bold;
+}
+
+.card-img:hover {
+    filter: blur(8px) opacity(.5);
+
+}
+
+.card-img:hover~.card-body {
+    opacity: 1;
+    // display: block;
+}

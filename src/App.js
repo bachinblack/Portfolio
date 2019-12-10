@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import 'react-notifications/lib/notifications.css';
+import './App.scss';
 
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,6 +12,7 @@ import { faHome, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 import Home from './views/Home';
 import Projects from './views/Projects';
+import Footer from './views/Footer';
 
 
 class App extends React.Component {
@@ -31,12 +33,10 @@ class App extends React.Component {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
       this.setState({
         scrollDisplay: { display: "block" },
-        // navbar: { position: "fixed", backgroundColor: "#f8f9fa !important"}
       });
     } else {
       this.setState({
         scrollDisplay: { display: "none" },
-        // navbar: { position: "static", backgroundColor: "transparent !important"}
       });
     }
   }
@@ -50,17 +50,17 @@ class App extends React.Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#home">ABOUT ME</Nav.Link>
-              <Nav.Link href="#link">PROJECTS</Nav.Link>
+              <Nav.Link href="#projects">PROJECTS</Nav.Link>
             </Nav>
             <Form inline>
               <FormControl type="text" placeholder="Looking for something?" className="mr-sm-2" />
             </Form>
           </Navbar.Collapse>
         </Navbar>
-        {/* Each elem is a window'heighted view */}
         <Home />
         <Projects/>
-
+        <Footer />
+        {/* Bottom right button to go back on top of the page */}
         <a href="#home" className="navigator scrollup" style={this.state.scrollDisplay}><FontAwesomeIcon icon={faChevronUp} size="3x" /></a>
       </div>
     );
