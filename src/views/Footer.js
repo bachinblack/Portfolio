@@ -11,8 +11,8 @@ export default function Footer() {
                     <h2>Thank you for reaching the footer !</h2>
                     <p>
                         I put a lot of work into this portfolio and I hope you enjoy the result.<br/>
-                        It was made with ReactJs. The sources are available <strong><a href="https://github.com/bachinblack/Portfolio">there</a></strong>.<br/>
-                        It is then built and sent <strong><a href="https://github.com/bachinblack/bachinblack.github.io">there</a></strong>.
+                        It was made with ReactJs. The sources are available <a href="https://github.com/bachinblack/Portfolio">here</a>.<br/>
+                        It is then built and sent <a href="https://github.com/bachinblack/bachinblack.github.io">here</a>.
                     </p>
                 </div>
             </div>

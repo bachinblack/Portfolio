@@ -1,0 +1,107 @@
+#projects {
+    // background-image: url("/backgrounds/howls.png");
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    background-color: $middle;
+    text-align: left;
+    padding-top: 50px;
+}
+
+.lit {
+    background-color: $dark;
+    color: $bright;
+    padding: 10px;
+    display:inline-block;
+    margin: 0;
+}
+
+
+.p-list::-webkit-scrollbar-track {
+    background-color: $bright;
+}
+
+.p-list {
+    position: absolute;
+    bottom: 0px;
+    overflow-x: hidden;
+    width: 100%;
+    // margin: 23vh 0 0 0;
+}
+
+.p-list:hover {
+    overflow-x: overlay;
+    overflow-y: hidden;
+}
+
+.p-list > .row {
+    margin: 0;
+}
+
+.proj {
+    // margin: 10px 15px;
+    text-align: left;
+}
+
+
+.proj .card-title {
+    height: 48px;
+}
+
+.card-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card,
+.card-img {
+    width: 21rem;
+    border: 0;
+    border-radius: 0;
+}
+
+
+.card-body {
+    color: $dark;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    pointer-events: none;
+    // display: none;
+    opacity: 0;
+    font-weight: bold;
+}
+
+.card-img:hover, .card-img:focus {
+    filter: blur(8px) opacity(.5);
+}
+
+.card-img:hover + .card-body,
+:focus + .card-body {
+    opacity: 1;
+    // display: block;
+}
+
+.line {
+    transition: all 1s;
+    position: relative;
+    margin: 10px auto;
+    width: 1%;
+    border: 1px solid $dark;
+    opacity: 0;
+}
+
+.card-img:hover + .card-body > .line,
+:focus + .card-body > .line {
+    opacity: .6;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .p-list {
+        overflow-x: auto !important;
+    }
+    .card-img,
+    .card {
+        width: 100vw;
+    }
+}

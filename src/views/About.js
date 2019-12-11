@@ -12,7 +12,7 @@ class About extends React.Component {
 
     render() {
         return (
-            <section if="about">
+            <section id="about">
 
             </section>
         );

@@ -59,21 +59,22 @@ export default function Contact() {
         },
     ];
 
+    // Q! icons 2x or 3x?
     return (
         <div>
             <p>
                 {links.map((el, id) => (
                     <a target="_blank" rel="noopener noreferrer" className="link" href={el.link} key={id}>
-                        <FontAwesomeIcon icon={el.icon} size="2x" />
+                        <FontAwesomeIcon icon={el.icon} size="3x" />
                     </a>
                 ))}
             </p>
             <p>
                 <a className="link" href="#" onClick={() => cpyText("+33675186213")}>
-                    <FontAwesomeIcon icon={faPhone} size="2x" />
+                    <FontAwesomeIcon icon={faPhone} size="3x" />
                 </a>
                 <a className="link" href="#" onClick={() => cpyText("philippe.bouttereux@gmail.com")}>
-                    <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                    <FontAwesomeIcon icon={faEnvelope} size="3x" />
                 </a>
             </p>
             <NotificationContainer />

@@ -59,18 +59,21 @@ class Projects extends React.Component {
 
         return (
             <section id="projects">
-                {/* <h2 className="title">Here are my projects</h2>
-                <p>These are directly fetched from github so they are up to date :)</p> */}
+                <h2 className="lit">Projects</h2><br/>
+                <p className="lit">Here are my personnal projects along with some school projects</p><br/>
+                <p className="lit">Kinda shows everything I tried since I started studying computing</p><br/>
+                <p className="lit">These are directly fetched from <a href="https://github.io/bachinblack">Github</a></p>
                 {/* <div style={{height: "100%"}}> */}
                 <div className="p-list">
                     {this.state.projects.map((arr, id) => (
                         <div className="row flex-nowrap" key={id}>
                             {arr.map((el, index) => (
                                 <a target="_blank" rel="noopener noreferrer" href={el.html_url} className="proj" key={el.id}>
-                                    <Card style={{ width: '21rem' }}>
+                                    <Card>
                                         <Card.Img onError={(e) => this.defaultImg(e.target, el.language)} src={el.image} />
                                         <Card.Body>
                                             <Card.Title>{el.name}</Card.Title>
+                                            <div className="line"></div>
                                             <Card.Text>
                                                 {el.description}
                                             </Card.Text>

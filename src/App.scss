@@ -1,8 +1,8 @@
-/* ABT Clear color teal or white */
 @import "./variables";
-
 @import "./global";
-@import "./views/Home.scss";;
-@import "./views/Contact.scss";
-@import "./views/Projects.scss";
-@import "./views/Footer.scss";
+
+@import "./styles/Home.scss";;
+@import "./styles/Contact.scss";
+@import "./styles/About.scss";
+@import "./styles/Projects.scss";
+@import "./styles/Footer.scss";

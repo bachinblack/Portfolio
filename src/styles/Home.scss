@@ -20,6 +20,11 @@
     padding-top: 20vh;
     height: calc(100vh - 56px);
     position: relative;
+    color: $dark;
+}
+
+.intro-body h2 {
+    margin-bottom: .7rem;
 }
 
 .background {

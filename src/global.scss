@@ -8,15 +8,21 @@ html {
   text-align: center;
 }
 
-h2 {
-  color: $dark;
-  transition: all .4s;
-  margin-bottom: .7rem;
+a {
+  transition: all .3s;
+  font-weight: bold;
+  color: $bright;
 }
 
-a:hover { text-decoration: none; }
+a:hover {
+  color: darken($bright, 20);
+  text-decoration: none;
+}
+
+nav a { font-weight: initial; }
 
 a > h2 {
+  transition: all .4s;
   color: lighten($dark, 20%);
 }
 
@@ -83,12 +89,12 @@ a > h2:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #50514F;
+  background: $dark;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(63, 65, 62);
+  background: $dark;
 }
 
   /**************/

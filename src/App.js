@@ -13,7 +13,7 @@ import { faHome, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import Home from './views/Home';
 import Projects from './views/Projects';
 import Footer from './views/Footer';
-
+import About from './views/About';
 
 class App extends React.Component {
 
@@ -49,7 +49,7 @@ class App extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">ABOUT ME</Nav.Link>
+              <Nav.Link href="#about">ABOUT ME</Nav.Link>
               <Nav.Link href="#projects">PROJECTS</Nav.Link>
             </Nav>
             <Form inline>
@@ -58,7 +58,8 @@ class App extends React.Component {
           </Navbar.Collapse>
         </Navbar>
         <Home />
-        <Projects/>
+        {/* <About /> */}
+        <Projects />
         <Footer />
         {/* Bottom right button to go back on top of the page */}
         <a href="#home" className="navigator scrollup" style={this.state.scrollDisplay}><FontAwesomeIcon icon={faChevronUp} size="3x" /></a>

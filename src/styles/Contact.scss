@@ -1,11 +1,11 @@
 .link {
     transition: all .5s;
-    color: #eee;
+    color: lighten($bright, 20);
 }
 
 .link:hover {
     text-decoration: none;
-    color: #111;
+    color: $bright;
 }
 
 .link{

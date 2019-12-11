@@ -1,5 +1,5 @@
 .f-row {
-    background-color: #086788;
+    // background-color: #086788;
     color: #ccc;
     width: 100%;
     margin: 0;
@@ -8,6 +8,7 @@
 }
 
 footer .col-lg-6 {
+    background-color: $middle;
     display: table;
     height: 100%;
 }
@@ -17,6 +18,4 @@ footer > .col-lg-6 > div {
     vertical-align: middle;
 }
 
-footer h2 {
-    color: $bright;
-}
+footer h2 { color: $bright; }
