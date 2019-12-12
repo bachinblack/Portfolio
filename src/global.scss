@@ -4,9 +4,24 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  margin: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  //   sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Muli", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
 .App {
   text-align: center;
 }
+
 
 a {
   transition: all .3s;
@@ -28,6 +43,14 @@ a > h2 {
 
 a > h2:hover {
   color: darken($dark, 5%);
+}
+
+.lit {
+  background-color: $dark;
+  color: $bright;
+  padding: 10px;
+  display:inline-block;
+  margin: 0;
 }
 
   /**************/
@@ -81,7 +104,7 @@ a > h2:hover {
 
 
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
@@ -90,7 +113,7 @@ a > h2:hover {
 
 ::-webkit-scrollbar-thumb {
   background: $dark;
-  border-radius: 10px;
+  // border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -108,8 +131,8 @@ section {
 }
 
 .title {
-  width: 100%;
-  padding: 10px 0;
-  background-color: $middle;
+  margin: 0 40px 40px 40px;
   color: $bright;
+  font-weight: bold;
+  font-size: 50px;
 }

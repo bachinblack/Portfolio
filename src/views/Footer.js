@@ -10,9 +10,10 @@ export default function Footer() {
                 <div>
                     <h2>Thank you for reaching the footer !</h2>
                     <p>
-                        I put a lot of work into this portfolio and I hope you enjoy the result.<br/>
+                        I designed this website myself (no template) though I used some npm packages.<br/>
+                        I also shot every photos displayed on the page (thus the poor quality..)<br/>
                         It was made with ReactJs. The sources are available <a href="https://github.com/bachinblack/Portfolio">here</a>.<br/>
-                        It is then built and sent <a href="https://github.com/bachinblack/bachinblack.github.io">here</a>.
+                        It is then built with webpack and sent <a href="https://github.com/bachinblack/bachinblack.github.io">here</a>.
                     </p>
                 </div>
             </div>

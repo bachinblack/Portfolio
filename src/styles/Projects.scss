@@ -2,19 +2,20 @@
     // background-image: url("/backgrounds/howls.png");
     // background-repeat: no-repeat;
     // background-size: 100%;
-    background-color: $middle;
+    background-color: $bright;
     text-align: left;
+    // Q! padding or no padding?
+}
+
+.explanation {
+    position: absolute;
+    bottom: 600px;
+    height: calc(100vh - 600px);
     padding-top: 50px;
+    width: 100%;
+    background-image: url(../images/backgrounds/sushibw.png);
+    background-size: cover;
 }
-
-.lit {
-    background-color: $dark;
-    color: $bright;
-    padding: 10px;
-    display:inline-block;
-    margin: 0;
-}
-
 
 .p-list::-webkit-scrollbar-track {
     background-color: $bright;
@@ -25,7 +26,6 @@
     bottom: 0px;
     overflow-x: hidden;
     width: 100%;
-    // margin: 23vh 0 0 0;
 }
 
 .p-list:hover {
@@ -36,12 +36,6 @@
 .p-list > .row {
     margin: 0;
 }
-
-.proj {
-    // margin: 10px 15px;
-    text-align: left;
-}
-
 
 .proj .card-title {
     height: 48px;
@@ -96,6 +90,10 @@
     width: 100%;
 }
 
+/************/
+/*  Mobile  */
+/************/
+
 @media only screen and (max-width: 600px) {
     .p-list {
         overflow-x: auto !important;
@@ -103,5 +101,12 @@
     .card-img,
     .card {
         width: 100vw;
+    }
+    #projects {
+        padding-top: 0;
+    }
+    .explanation {
+        background-image: none;
+        // background-color: #eee;
     }
 }

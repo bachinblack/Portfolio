@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
+import Palace from '../images/backgrounds/palace.jpg';
 import Contact from './Contact';
 
 
@@ -18,7 +19,7 @@ class Home extends React.Component {
     render() {
         return (
             <>
-                <img src="./backgrounds/home.jpg" className="background" alt="logo" />
+                <img src={Palace} className="background" alt="logo" />
                 <div className="intro-body">
                 {/* ABT Contacts in or out of .intro? */}
                 <Contact />
@@ -29,9 +30,9 @@ class Home extends React.Component {
                         <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/12_5J-5AcHJqjtWy2IxvFkQDpyKbUGBlK/view?usp=sharing">
                             <h2>You can download my resume here</h2>
                         </a>
-                        <h2>Or you can click the button below to start the tour</h2>
                     </div>
-                    <a className="navigator" href="#about"><FontAwesomeIcon icon={faArrowDown} size="4x" /></a>
+                    <p id="caption">Gyeongbokgung palace in Seoul</p>
+                    <a className="navigator" href="#projects"><FontAwesomeIcon icon={faArrowDown} size="4x" /></a>
                 </div>
             </>
         );

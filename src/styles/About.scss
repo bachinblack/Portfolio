@@ -1,4 +1,45 @@
 #about {
-    background-image: url("/backgrounds/howls.png");
+    background-image: url(../images/backgrounds/lake.jpg);
     background-size: cover;
+    // filter: grayscale(1) brightness(.7);
+    // background-color: #eee;
+    // text-align: right;
+    padding: 0 100px;
+    padding-top: 50px;
+}
+
+#about .lit {
+    background-color: $dark;
+    margin-right: 25px;
+}
+
+#me {
+    width: 300px;
+    float: left;
+    margin: 40px;
+}
+
+#passions {
+    margin-bottom: 100px;
+}
+
+#passions > .col-lg-4 {
+    padding: 0 15px;
+}
+
+.inner-box {
+    padding: 10px;
+    width: 100%;
+    background-color: #eee;
+    // border: 1px solid #aaa;
+}
+
+/************/
+/*  Mobile  */
+/************/
+
+@media only screen and (max-width: 600px) {
+    #about {
+        padding: 5px;
+    }
 }

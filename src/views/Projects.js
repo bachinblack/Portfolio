@@ -1,18 +1,24 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import CPP from '../images/languages/c++.png';
+import CS from '../images/languages/csharp.png';
+import JAVA from '../images/languages/java.png';
+import JS from '../images/languages/javascript.png';
+import PYTHON from '../images/languages/python.png';
+import DEFAULT from '../images/languages/default.png';
 
 
 const baseImageUrl = "https://raw.githubusercontent.com/bachinblack/";
 const imagePath = "/master/site/picture.png";
 const defaultImages = {
-    "C++": "c++.png",
-    "C": "c++.png",
-    "C#": "csharp.png",
-    "Java": "java.png",
-    "JavaScript": "javascript.png",
-    "CSS": "javascript.png",
-    "Python": "python.png",
-    "default": "default.png",
+    "C++": CPP,
+    "C": CPP,
+    "C#": CS,
+    "Java": JAVA,
+    "JavaScript": JS,
+    "CSS": JS,
+    "Python": PYTHON,
+    "default": DEFAULT,
 };
 
 
@@ -26,10 +32,13 @@ class Projects extends React.Component {
 
     componentDidMount() {
         fetch('https://api.github.com/users/bachinblack/repos')
-            .then((raw) => raw.json())
-            .then((res) => {
-                console.log(res);
-                const projects = res.filter((el) => (!el.fork)).map((el) => {
+        .then((raw) => raw.json())
+        .then((res) => {
+            console.log(res);
+            const projects = res
+                .filter((el) => (!el.fork))
+                .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
+                .map((el) => {
                     return {
                         id: el.id,
                         name: el.name,
@@ -39,31 +48,30 @@ class Projects extends React.Component {
                         image: baseImageUrl + el.name + imagePath
                     };
                 });
-                const rows = [
-                    projects.filter((_, id) => !(id % 2)),
-                    projects.filter((_, id) => !!(id % 2)),
-                ];
-                this.setState({ projects: rows });
-            });
+
+            const rows = [
+                projects.filter((_, id) => !(id % 2)),
+                projects.filter((_, id) => !!(id % 2)),
+            ];
+            this.setState({ projects: rows });
+        });
     }
 
     defaultImg(target, language) {
-        target.src = "/languages/" + defaultImages[language] || "./bg.jpg";
+        target.src = defaultImages[language];
     }
-
-    // mouseIn(el) { el.hover = true; this.forceUpdate(); }
-
-    // mouseOut(el) { el.hover = false; this.forceUpdate();}
 
     render() {
 
         return (
             <section id="projects">
-                <h2 className="lit">Projects</h2><br/>
-                <p className="lit">Here are my personnal projects along with some school projects</p><br/>
-                <p className="lit">Kinda shows everything I tried since I started studying computing</p><br/>
-                <p className="lit">These are directly fetched from <a href="https://github.io/bachinblack">Github</a></p>
-                {/* <div style={{height: "100%"}}> */}
+                <div className="explanation">
+                    <h2 className="lit">Projects</h2><br/>
+                    <p className="lit">Here are my personnal projects along with some school projects</p><br/>
+                    <p className="lit">These are directly fetched from <a href="https://github.io/bachinblack">Github</a></p><br/>
+                    <p className="lit">Some of them are very old so please, note that my beauty standards have improved</p><br/>
+                </div>
+                {/* <p className="lit">Kinda shows everything I tried since I started studying computing</p><br/> */}
                 <div className="p-list">
                     {this.state.projects.map((arr, id) => (
                         <div className="row flex-nowrap" key={id}>
@@ -77,17 +85,12 @@ class Projects extends React.Component {
                                             <Card.Text>
                                                 {el.description}
                                             </Card.Text>
-                                            {/* <Card.Link href={el.html_url} title="See on github">
-                                                See on github ! */}
-                                            {/* <FontAwesomeIcon icon={faLocationArrow} size="2x" /> */}
-                                            {/* </Card.Link> */}
                                         </Card.Body>
                                     </Card>
                                 </a>
                             ))}
                         </div>
                     ))}
-                {/* </div> */}
                 </div>
             </section >
         );

@@ -1,8 +1,10 @@
+@import 'bootstrap/dist/css/bootstrap.min';
+
 @import "./variables";
 @import "./global";
 
 @import "./styles/Home.scss";;
 @import "./styles/Contact.scss";
-@import "./styles/About.scss";
+// @import "./styles/About.scss";
 @import "./styles/Projects.scss";
 @import "./styles/Footer.scss";

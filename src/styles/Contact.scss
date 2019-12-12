@@ -1,13 +1,18 @@
 .link {
-    transition: all .5s;
     color: lighten($bright, 20);
+    transition: all .5s;
+    margin: 15px;
+    background: none;
+    border: 0;
+}
+
+.link:focus,
+.link:active {
+    box-shadow: 0;
+    border: 0;
 }
 
 .link:hover {
     text-decoration: none;
     color: $bright;
-}
-
-.link{
-    margin: 15px;
 }
