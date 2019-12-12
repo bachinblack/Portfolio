@@ -58,7 +58,7 @@ class Projects extends React.Component {
     }
 
     defaultImg(target, language) {
-        target.src = defaultImages[language];
+        target.src = defaultImages[language] || DEFAULT;
     }
 
     render() {

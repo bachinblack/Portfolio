@@ -30,6 +30,7 @@ class Home extends React.Component {
                         <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/12_5J-5AcHJqjtWy2IxvFkQDpyKbUGBlK/view?usp=sharing">
                             <h2>You can download my resume here</h2>
                         </a>
+                        <h2>Or click below to start the tour</h2>
                     </div>
                     <p id="caption">Gyeongbokgung palace in Seoul</p>
                     <a className="navigator" href="#projects"><FontAwesomeIcon icon={faArrowDown} size="4x" /></a>

@@ -1,10 +1,7 @@
 // const webpack = require('webpack');
 const path = require('path');
-const glob = require('glob')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin');
-const whitelister = require('purgecss-whitelister')
 // const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -21,7 +18,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|ts|tsx|json)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -42,6 +39,14 @@ module.exports = {
                             ]
                         }
                     },
+                    {
+                        loader: 'css-url-loader',
+                        options: {
+                            from: '/images/',
+                            to: '/lolmdr/'
+                        }
+                    },
+                    'resolve-url-loader',
                     'sass-loader',
                 ],
             },
@@ -78,12 +83,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `./styles-${commitHash}.css`,
         }),
-        new PurgecssPlugin({
-            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-            whitelist: whitelister('node_modules/bootstrap/dist/css/bootstrap.min.css')
-        }),
         new HtmlWebPackPlugin({
             template: "./public/index.html",
+            favicon: "./public/bach.png",
+            manifest: "./public/manifest.json",
             filename: "./index.html"
         }),
         //// Visualize the size of each plugins in the final js file.
@@ -100,11 +103,11 @@ module.exports = {
         ]
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './build'),
         filename: `main-${commitHash}.js`
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.scss', '.css'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.scss', '.css'],
         alias: {
             Images: path.resolve(__dirname, 'images'),
             // views: path.resolve(__dirname, 'ouinon')

@@ -13,7 +13,7 @@
     height: calc(100vh - 600px);
     padding-top: 50px;
     width: 100%;
-    background-image: url(../images/backgrounds/sushibw.png);
+    background-image: url(./images/backgrounds/sushibw.png);
     background-size: cover;
 }
 
@@ -27,6 +27,11 @@
     overflow-x: hidden;
     width: 100%;
 }
+
+// Only chrome supports overflow: overlay
+@-moz-document url-prefix() { .p-list { overflow-x: scroll !important; } }
+@supports (-ms-ime-align:auto) { .p-list { overflow-x: scroll !important; } }
+
 
 .p-list:hover {
     overflow-x: overlay;
