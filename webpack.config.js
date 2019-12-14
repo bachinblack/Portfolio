@@ -8,7 +8,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const commitHash = require('child_process').execSync('git rev-parse --short HEAD').toString().slice(0, -1);;
 
 
-console.log("creating main for commit " + commitHash + " in " + path.resolve(__dirname, './public/js'));
+console.log("creating main for commit " + commitHash + " in " + path.resolve(__dirname, './build'));
 
 const PATHS = {
     src: path.join(__dirname, 'src')
