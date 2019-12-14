@@ -32,8 +32,8 @@ class Home extends React.Component {
                         </a>
                         <h2>Or click below to start the tour</h2>
                     </div>
-                    <p id="caption">Gyeongbokgung palace in Seoul</p>
-                    <a className="navigator" href="#projects"><FontAwesomeIcon icon={faArrowDown} size="4x" /></a>
+                    {/* <p id="caption">Gyeongbokgung palace in Seoul</p> */}
+                    <a className="navigator" href="#about"><FontAwesomeIcon icon={faArrowDown} size="4x" /></a>
                 </div>
             </>
         );

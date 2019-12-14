@@ -1,3 +1,4 @@
+@import 'react-notifications/dist/react-notifications';
 @import 'bootstrap/dist/css/bootstrap.min';
 
 @import "./variables";
@@ -5,6 +6,7 @@
 
 @import "./styles/Home.scss";;
 @import "./styles/Contact.scss";
-// @import "./styles/About.scss";
+@import "./styles/About.scss";
+@import "./styles/Spotify.scss";
 @import "./styles/Projects.scss";
 @import "./styles/Footer.scss";

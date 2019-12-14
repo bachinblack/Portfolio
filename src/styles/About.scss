@@ -1,45 +1,100 @@
 #about {
-    background-image: url(../images/backgrounds/lake.jpg);
-    background-size: cover;
-    // filter: grayscale(1) brightness(.7);
-    // background-color: #eee;
-    // text-align: right;
-    padding: 0 100px;
-    padding-top: 50px;
+    color: #777;
+    font-weight: bold;
+    vertical-align: middle;
 }
 
-#about .lit {
-    background-color: $dark;
-    margin-right: 25px;
+.sub-section {
+    transition: border .3s;
+    position: absolute;
+    width: 46vw;
+    height: 45vh;
+    border: 1px solid $bright;
+    padding: 4vh 4vw;
 }
 
-#me {
-    width: 300px;
-    float: left;
-    margin: 40px;
+.sub-section:hover {
+    border: 1px solid darken($bright, 20);
+    // background-color: rgba($bright, .6);
+    z-index: 5;
 }
 
-#passions {
-    margin-bottom: 100px;
+.decoration {
+    width: 25vw;
+    height: 25vh;
+    right: 24vw;
+    bottom: 14vh;
 }
 
-#passions > .col-lg-4 {
-    padding: 0 15px;
+.sub-section > p {
+    width: 40vw;
+    height: 37vh;
+    vertical-align: middle;
+    display: table-cell;
 }
 
-.inner-box {
-    padding: 10px;
-    width: 100%;
-    background-color: #eee;
-    // border: 1px solid #aaa;
+.top-section {
+    top: 7vh;
+    left: 5vw;
 }
+
+.middle-section {
+    right: 5vw;
+    top: 20vh;
+}
+
+.bottom-section {
+    left: 7vw;
+    bottom: 7vh;
+}
+
 
 /************/
 /*  Mobile  */
 /************/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
+
     #about {
-        padding: 5px;
+        padding: 3vh 7vw;
     }
+
+    .sub-section {
+        padding: 0 6vw;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .sub-section > p { width: 80vw; }
+
+    .top-section {
+        height: 32vh;
+    }
+    .top-section > p { height: 32vh;}
+
+    .middle-section {
+        top: -2vh;
+        left: 5vw;
+        height: 23vh;
+    }
+
+    .middle-section > p{ height: 23vh; }
+
+    .bottom-section {
+        top: -4vh;
+        left: 2vw;
+        height: 42vh;
+    }
+    .bottom-section > p {
+        height: 42vh;
+        vertical-align: top;
+        padding-top: 5vh;
+    }
+
+    .decoration,.unimportant { display: none;}
 }

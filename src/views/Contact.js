@@ -1,5 +1,5 @@
 import React from 'react';
-// import {NotificationContainer, NotificationManager} from 'react-notifications';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -19,9 +19,9 @@ function fallbackCopyTextToClipboard(text) {
 
     try {
         document.execCommand('copy');
-        // NotificationManager.success('Copied on your clipboard !');
+        NotificationManager.success('Copied on your clipboard !');
     } catch (err) {
-        // NotificationManager.error('Failed to copy on your clipboard !');
+        NotificationManager.error('Failed to copy on your clipboard !');
     }
 
     document.body.removeChild(textArea);
@@ -33,9 +33,9 @@ function cpyText(text) {
         return;
     }
     navigator.clipboard.writeText(text).then(function() {
-        // NotificationManager.success('Copied on your clipboard !');
+        NotificationManager.success('Copied on your clipboard !');
       }, function(err) {
-        // NotificationManager.error('Failed to copy on your clipboard !');
+        NotificationManager.error('Failed to copy on your clipboard !');
       });
 }
 
@@ -77,7 +77,7 @@ export default function Contact() {
                     <FontAwesomeIcon icon={faEnvelope} size="3x" />
                 </button>
             </p>
-            {/* <NotificationContainer /> */}
+            <NotificationContainer />
         </div>
     );
 }

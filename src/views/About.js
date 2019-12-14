@@ -1,40 +1,50 @@
 import React from 'react';
 
+import Spotify from './Spotify';
+
+
 class About extends React.Component {
     constructor() {
         super();
         this.state = {
+            recentSongs: [],
+            mostRecentSong: undefined,
+            isPlaying: false,
         };
     }
 
-    componentDidMount() {
-    }
-
     render() {
+        const { mostRecentSong } = this.state;
         return (
             <section id="about">
-                <h2 className="title">Who am I</h2><br />
-                {/* <p className="lit">My name is Philippe BOUTTEREUX, I am 22 and I am a web and desktop developer</p><br />
-                <p className="lit">I won't talk about hard skills here, everything's in my resume</p><br />
-                <p className="lit">I speak French and English and I am currently learning Korean</p><br /> */}
-                <div id="passions" className="row">
-                    <div className="col-lg-4">
-                        <div className="inner-box">
-                            <h3>Computing</h3>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="inner-box">
-                            <h3>Project management</h3>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="inner-box">
-                            <h3>Music</h3>
-                        </div>
-                    </div>
+                {/* Overview */}
+                <div className="sub-section top-section">
+                    <p>
+                        I'm 22 and I come from the North-West of France.<br/>
+                        Spent a year in South Korea, and I' a'm still learning Korean now.<br/>
+                        This is where I got addicted to coffee.<br/>
+                        Since then, I also dream travelling the world for work.
+                    </p>
                 </div>
-                {/* <p id="caption">Suseongmot Lake in Daegu</p> */}
+                {/* Skills */}
+                <div className="sub-section middle-section">
+                    <p>
+                        Thanks to my 5 years as a student, intern and freelancer<br/>
+                        I have experience in development, project management and pitching.<br/>
+                    </p>
+                </div>
+                {/* Music */}
+                <div className="sub-section bottom-section">
+                    <p>
+                        Very interested in music, though I'm an amateur.<br/>
+                        <div className="unimportant">I play guitar and have been playing some drums and piano.<br/></div>
+                        Rock, pop, classic and sometime metal from every country.<br/>
+                        Like political music<br/>
+                        such as <a href="https://www.youtube.com/watch?v=dGWQqRyO8gA">Serj Tankian</a> or <a href="https://www.youtube.com/watch?v=1WFc7u8qWuo">Les Cowboy Fringuants.</a>
+                        <Spotify/>
+                    </p>
+                </div>
+                <div className="sub-section decoration"></div>
             </section>
         );
     }

@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import Home from './views/Home';
 import Projects from './views/Projects';
@@ -50,17 +50,19 @@ class App extends React.Component {
               <Nav.Link href="#about">ABOUT ME</Nav.Link>
               <Nav.Link href="#projects">PROJECTS</Nav.Link>
             </Nav>
-            <Form inline>
+            {/* <Form inline>
               <FormControl type="text" placeholder="Looking for something?" className="mr-sm-2" />
-            </Form>
+            </Form> */}
           </Navbar.Collapse>
         </Navbar>
         <Home />
-        {/* <About /> */}
+        <About />
         <Projects />
         <Footer />
         {/* Bottom right button to go back on top of the page */}
         <a href="#home" className="navigator scrollup" style={this.state.scrollDisplay}><FontAwesomeIcon icon={faChevronUp} size="3x" /></a>
+        {/* Bottom left button to go to the next section */}
+        {/* <a href="#projects" className="navigator scrolldown" style={this.state.scrollDisplay}><FontAwesomeIcon icon={faChevronDown} size="3x" /></a> */}
       </div>
     );
   }

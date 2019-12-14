@@ -48,7 +48,7 @@ class Projects extends React.Component {
                         image: baseImageUrl + el.name + imagePath
                     };
                 });
-
+            // if (window.screen.height) > 800 {
             const rows = [
                 projects.filter((_, id) => !(id % 2)),
                 projects.filter((_, id) => !!(id % 2)),
@@ -71,7 +71,7 @@ class Projects extends React.Component {
                     <p className="lit">These are directly fetched from <a href="https://github.io/bachinblack">Github</a></p><br/>
                     <p className="lit">Some of them are very old so please, note that my beauty standards have improved</p><br/>
                 </div>
-                {/* <p className="lit">Kinda shows everything I tried since I started studying computing</p><br/> */}
+                {/* For mobile: display only one line */}
                 <div className="p-list">
                     {this.state.projects.map((arr, id) => (
                         <div className="row flex-nowrap" key={id}>

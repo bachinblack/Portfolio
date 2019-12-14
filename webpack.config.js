@@ -25,7 +25,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
@@ -39,13 +39,13 @@ module.exports = {
                             ]
                         }
                     },
-                    {
-                        loader: 'css-url-loader',
-                        options: {
-                            from: '/images/',
-                            to: '/lolmdr/'
-                        }
-                    },
+                    // {
+                    //     loader: 'css-url-loader',
+                    //     options: {
+                    //         from: '/images/',
+                    //         to: '/lolmdr/'
+                    //     }
+                    // },
                     'resolve-url-loader',
                     'sass-loader',
                 ],

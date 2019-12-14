@@ -112,6 +112,10 @@
     }
     .explanation {
         background-image: none;
+        padding-top: 0;
         // background-color: #eee;
+    }
+    .explanation > p {
+        width: 100vw;
     }
 }
