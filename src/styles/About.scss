@@ -26,7 +26,7 @@
     bottom: 14vh;
 }
 
-.sub-section > p {
+.sub-section > div {
     width: 40vw;
     height: 37vh;
     vertical-align: middle;
@@ -70,12 +70,12 @@
         margin: 0 auto;
     }
 
-    .sub-section > p { width: 80vw; }
+    .sub-section > div { width: 80vw; }
 
     .top-section {
         height: 32vh;
     }
-    .top-section > p { height: 32vh;}
+    .top-section > div { height: 32vh;}
 
     .middle-section {
         top: -2vh;
@@ -83,14 +83,14 @@
         height: 23vh;
     }
 
-    .middle-section > p{ height: 23vh; }
+    .middle-section > div { height: 23vh; }
 
     .bottom-section {
         top: -4vh;
         left: 2vw;
         height: 42vh;
     }
-    .bottom-section > p {
+    .bottom-section > div {
         height: 42vh;
         vertical-align: top;
         padding-top: 5vh;

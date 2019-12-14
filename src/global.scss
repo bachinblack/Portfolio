@@ -73,11 +73,14 @@ button:focus { outline: 0 !important; }
   box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, .25);
 }
 
-.navbar-collapse {
-  width: 50%;
-  margin: 0 25%;
-  top: 10px !important;
-  left: 0;
+@media only screen and (max-width: 600px) {
+
+  .navbar-collapse {
+    width: 50%;
+    margin: 0 25%;
+    top: 10px !important;
+    left: 0;
+  }
 }
 
   /***************/

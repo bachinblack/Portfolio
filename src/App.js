@@ -9,9 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import Home from './views/Home';
-import Projects from './views/Projects';
-import Footer from './views/Footer';
 import About from './views/About';
+import Projects from './views/Projects';
+import Photos from './views/Photos';
+import Footer from './views/Footer';
+
 
 class App extends React.Component {
 
@@ -58,6 +60,7 @@ class App extends React.Component {
         <Home />
         <About />
         <Projects />
+        {/* <Photos /> */}
         <Footer />
         {/* Bottom right button to go back on top of the page */}
         <a href="#home" className="navigator scrollup" style={this.state.scrollDisplay}><FontAwesomeIcon icon={faChevronUp} size="3x" /></a>

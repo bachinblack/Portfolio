@@ -42,7 +42,7 @@ class Spotify extends React.Component {
               {mostRecentSong.nowPlaying ?
               "Hey I am listening to this song right now!"
             :
-              "Here is the last song I listened to"}
+              "Here is the last song I listened to:"}
               {/* <div id="on-air" className={"green-light" + this.state.lightClass}></div> */}
               <br/>
               <iframe id="play-button" src={"https://open.spotify.com/embed/track/" + mostRecentSong.id + "?si=-VJyxQ1yQ6eTvcTRPB8XAA"} width="300" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
