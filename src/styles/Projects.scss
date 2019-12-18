@@ -8,13 +8,24 @@
 }
 
 .explanation {
-    position: absolute;
-    bottom: 600px;
+    // position: absolute;
+    // bottom: 600px;
     height: calc(100vh - 600px);
-    padding-top: 50px;
+    // padding-top: 50px;
     width: 100%;
     background-image: url(./images/backgrounds/sushibw.png);
     background-size: cover;
+    display: table;
+}
+
+.inner-exp {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.explanation > * {
+    vertical-align: middle;
+    // display: table-cell;
 }
 
 .p-list::-webkit-scrollbar-track {
@@ -25,7 +36,13 @@
     position: absolute;
     bottom: 0px;
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100%;
+}
+
+.p-list > .flex {
+    height: 600px;
+    flex-flow: column wrap;
 }
 
 // Only chrome supports overflow: overlay
@@ -35,7 +52,6 @@
 
 .p-list:hover {
     overflow-x: overlay;
-    overflow-y: hidden;
 }
 
 .p-list > .row {
@@ -103,9 +119,15 @@
     .p-list {
         overflow-x: auto !important;
     }
+    .p-list > .flex {
+        height: calc(100vh - 198px);
+        flex-direction: column-reverse;
+    }
     .card-img,
     .card {
-        width: 100vw;
+        width: 50vw;
+        height: 50vw;
+        font-size: .6rem;
     }
     #projects {
         padding-top: 0;
@@ -113,9 +135,9 @@
     .explanation {
         background-image: none;
         padding-top: 0;
-        // background-color: #eee;
+        height: 198px;
     }
-    .explanation > p {
+    .explanation p {
         width: 100vw;
     }
 }

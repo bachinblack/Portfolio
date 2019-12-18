@@ -48,12 +48,7 @@ class Projects extends React.Component {
                         image: baseImageUrl + el.name + imagePath
                     };
                 });
-            // if (window.screen.height) > 800 {
-            const rows = [
-                projects.filter((_, id) => !(id % 2)),
-                projects.filter((_, id) => !!(id % 2)),
-            ];
-            this.setState({ projects: rows });
+            this.setState({ projects: projects });
         });
     }
 
@@ -66,31 +61,31 @@ class Projects extends React.Component {
         return (
             <section id="projects">
                 <div className="explanation">
-                    <h2 className="lit">Projects</h2><br/>
-                    <p className="lit">Here are my personnal projects along with some school projects</p><br/>
-                    <p className="lit">These are directly fetched from <a href="https://github.io/bachinblack">Github</a></p><br/>
-                    <p className="lit">Some of them are very old so please, note that my beauty standards have improved</p><br/>
+                    <div className="inner-exp">
+                        <h2 className="lit">Projects</h2><br/>
+                        <p className="lit">Here are my personnal projects along with some school projects</p><br/>
+                        <p className="lit">These are directly fetched from <a href="https://github.io/bachinblack">Github</a></p><br/>
+                        <p className="lit">Some of them are very old so please, note that my beauty standards have improved</p><br/>
+                    </div>
                 </div>
                 {/* For mobile: display only one line */}
                 <div className="p-list">
-                    {this.state.projects.map((arr, id) => (
-                        <div className="row flex-nowrap" key={id}>
-                            {arr.map((el, index) => (
-                                <a target="_blank" rel="noopener noreferrer" href={el.html_url} className="proj" key={el.id}>
-                                    <Card>
-                                        <Card.Img onError={(e) => this.defaultImg(e.target, el.language)} src={el.image} />
-                                        <Card.Body>
-                                            <Card.Title>{el.name}</Card.Title>
-                                            <div className="line"></div>
-                                            <Card.Text>
-                                                {el.description}
-                                            </Card.Text>
-                                        </Card.Body>
-                                    </Card>
-                                </a>
-                            ))}
-                        </div>
-                    ))}
+                    <div className="row flex">
+                        {this.state.projects.map((el) => (
+                            <a target="_blank" rel="noopener noreferrer" href={el.html_url} className="proj" key={el.id}>
+                                <Card>
+                                    <Card.Img onError={(e) => this.defaultImg(e.target, el.language)} src={el.image} />
+                                    <Card.Body>
+                                        <Card.Title>{el.name}</Card.Title>
+                                        <div className="line"></div>
+                                        <Card.Text>
+                                            {el.description}
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </section >
         );
