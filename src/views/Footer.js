@@ -11,7 +11,7 @@ export default function Footer() {
                     <h2>Thank you for reaching the footer !</h2>
                     <p>
                         I designed this website myself (no template) though I used some npm packages.<br/>
-                        I also took the pictures myself (thus the poor quality..)<br/>
+                        I also took the pictures myself (hence the poor quality..)<br/>
                         It was made with ReactJs. The sources are available <a href="https://github.com/bachinblack/Portfolio">here</a>.<br/>
                         It is then built with webpack and sent <a href="https://github.com/bachinblack/bachinblack.github.io">here</a>.
                     </p>

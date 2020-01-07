@@ -40,8 +40,8 @@ class About extends React.Component {
                         Very interested in music, though I'm an amateur.<br/>
                         <div className="unimportant">I play guitar and have been playing some drums and piano.<br/></div>
                         Rock, pop, classic and sometime metal from every country.<br/>
-                        I gReally like political music<br/>
-                        such as <a href="https://www.youtube.com/watch?v=dGWQqRyO8gA">Serj Tankian</a> or <a href="https://www.youtube.com/watch?v=1WFc7u8qWuo">Les Cowboy Fringuants.</a>
+                        I like politically commited music a lot<br/>
+                        such as <a href="https://www.youtube.com/watch?v=dGWQqRyO8gA">Serj Tankian</a> or <a href="https://www.youtube.com/watch?v=sYRp8oP0yiw">Les Cowboy Fringuants.</a>
                         <Spotify/>
                     </div>
                 </div>
