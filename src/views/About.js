@@ -31,7 +31,7 @@ class About extends React.Component {
                     <div>
                         Thanks to my 5 years as a student, intern and freelancer<br/>
                         I have experience in development, project management and pitching.<br/>
-                        It's all in my resume so I'm done talking about it
+                        It's all in my resume so I wont talk about it anymore here
                     </div>
                 </div>
                 {/* Music */}
@@ -40,7 +40,7 @@ class About extends React.Component {
                         Very interested in music, though I'm an amateur.<br/>
                         <div className="unimportant">I play guitar and have been playing some drums and piano.<br/></div>
                         Rock, pop, classic and sometime metal from every country.<br/>
-                        I like politically commited music a lot<br/>
+                        I especially like politically commited music<br/>
                         such as <a href="https://www.youtube.com/watch?v=dGWQqRyO8gA">Serj Tankian</a> or <a href="https://www.youtube.com/watch?v=sYRp8oP0yiw">Les Cowboy Fringuants.</a>
                         <Spotify/>
                     </div>

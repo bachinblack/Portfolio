@@ -87,7 +87,10 @@ module.exports = {
             template: "./public/index.html",
             favicon: "./public/bach.png",
             manifest: "./public/manifest.json",
-            filename: "./index.html"
+            filename: "./index.html",
+            minify: {
+                removeScriptTypeAttributes: true,
+            },
         }),
         //// Visualize the size of each plugins in the final js file.
         // new BundleAnalyzerPlugin()

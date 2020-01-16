@@ -44,8 +44,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar id="home" bg="light" expand="lg" style={this.state.navbar}>
-          <Navbar.Brand href="#home"><FontAwesomeIcon icon={faHome} /></Navbar.Brand>
+        <Navbar id="nav-home" bg="light" expand="lg" style={this.state.navbar}>
+          <Navbar.Brand href="#nav-home"><FontAwesomeIcon icon={faHome} /></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

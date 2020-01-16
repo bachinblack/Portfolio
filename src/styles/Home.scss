@@ -1,15 +1,20 @@
+#home {
+    height: calc(100vh-56px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .intro {
     background-color: rgba($bright, .85);
     width:50%;
     text-align: center;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 20px auto;
     padding: 10px;
 }
 
 .intro-body {
-    padding-top: 20vh;
-    height: calc(100vh - 56px);
-    position: relative;
     color: $dark;
 }
 
@@ -43,7 +48,7 @@
 /*  Mobile  */
 /************/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 991px) {
     .navbar-collapse {
         position: absolute;
         top: 50px;
@@ -51,7 +56,7 @@
 
     .intro {
         width: 100%;
-        margin-bottom: 5vh;
+        // margin-bottom: 5vh;
     }
 
     .form-inline {
@@ -59,8 +64,7 @@
     }
 
     .intro-body {
-        margin-top: 6vh;
-        padding-top: 0;
+        padding-top: 6vh;
     }
 
     #caption {
