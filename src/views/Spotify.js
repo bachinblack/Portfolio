@@ -13,7 +13,7 @@ class Spotify extends React.Component {
 
     componentDidMount() {
         // Getting the last 3 songs I listened to
-        fetch('http://wss.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=bach-in-black&api_key=7a4620ccd117bccc45714159e2155db0&format=json&limit=3')
+        fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=bach-in-black&api_key=7a4620ccd117bccc45714159e2155db0&format=json&limit=3')
         .then((r) => r.json())
         .then((songs) => {
             console.log(songs);
