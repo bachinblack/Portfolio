@@ -23,6 +23,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: .7rem;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -60,6 +66,10 @@ a > h2:hover {
   padding: 10px;
   display:inline-block;
   margin: 0;
+}
+
+.blurry {
+  filter: blur(3px);
 }
 
   /**************/
@@ -115,7 +125,6 @@ button:focus { outline: 0 !important; }
   .navigator:hover {
     color: $dark;
     background-color: $bright;
-    /* background-color: teal; */
     border-radius: 10%;
   }
 }
@@ -184,3 +193,17 @@ section {
 nav .mr-sm-2 {
   width: auto;
 }
+
+// path {
+//   fill: none;
+//   stroke-width: 4px;
+//   stroke: rgb(54, 179, 126);
+// }
+
+// circle {
+//   cursor: pointer;
+//   stroke-width: 8px;
+//   stroke: transparent;
+//   fill: rgb(54, 179, 126);
+//   transition: r 0.3s ease-out 0s;
+// }

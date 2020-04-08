@@ -38,11 +38,9 @@ class About extends React.Component {
                 <div className="sub-section bottom-section">
                     <div>
                         Very interested in music, though I'm an amateur.<br/>
-                        <div className="unimportant">I play guitar and have been playing some drums and piano.<br/></div>
-                        Rock, pop, classic and sometime metal from every country.<br/>
-                        I especially like politically commited music<br/>
-                        such as <a href="https://www.youtube.com/watch?v=dGWQqRyO8gA">Serj Tankian</a> or <a href="https://www.youtube.com/watch?v=sYRp8oP0yiw">Les Cowboy Fringuants.</a>
-                        <Spotify/>
+                        I play guitar and have been playing some drums and piano.<br/>
+                        I listen toRock, pop, classic and sometime metal from every country.<br/>
+                        <Spotify />
                     </div>
                 </div>
                 <div className="sub-section decoration"></div>

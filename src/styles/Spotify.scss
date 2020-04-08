@@ -1,36 +1,16 @@
-// .green-light {
-//   width: 40px;
-//   height: 40px;
-//   background-color: #999;
-//   border-radius: 100%;
-// }
-
-// .on-air {
-//   background-color: green;
-// }
-
-// #on-air {
-//   float: left;
-// }
-
-// #play-button {
-//   float: right;
-// }
-
-// .spotify {
-//   // width: 340px;
-//   vertical-align: middle;
-// }
+.on-air {
+  color: rgb(18, 184, 27);
+}
 
 .spotify {
   width: 100%;
-  position: absolute;
   left: 0;
   bottom: 2vh;
 }
 
 @media only screen and (max-width: 950px) {
   .spotify {
+    position: absolute;
     font-size: 13px;
     width: 80vw;
     bottom: -7px;

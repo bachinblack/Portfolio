@@ -65,7 +65,7 @@ export default function Contact() {
             <p>
                 {links.map((el, id) => (
                     <a target="_blank" rel="noopener noreferrer" className="link" href={el.link} key={id}>
-                        <FontAwesomeIcon icon={el.icon} size="3x" />
+                        <FontAwesomeIcon className={el.name} icon={el.icon} size="3x" />
                     </a>
                 ))}
             </p>

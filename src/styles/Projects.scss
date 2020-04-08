@@ -1,5 +1,5 @@
 #projects {
-    background-color: $bright;
+    background-color: #eee;
     text-align: left;
     // min-height: 810px;
 }
@@ -55,6 +55,7 @@
 
 .proj .card-title {
     height: 48px;
+    overflow-y: hidden;
 }
 
 .card-img {

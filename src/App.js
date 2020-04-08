@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import Home from './views/Home';
+// import TimeLine from './views/TimeLine';
 import About from './views/About';
 import Projects from './views/Projects';
 import Photos from './views/Photos';
@@ -59,6 +60,7 @@ class App extends React.Component {
         </Navbar>
         <Home />
         <About />
+        {/* <TimeLine /> */}
         <Projects />
         {/* <Photos /> */}
         <Footer />

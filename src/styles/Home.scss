@@ -1,13 +1,14 @@
-#home {
+#homepage {
     height: calc(100vh-56px);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: blur .6s;
 }
 
 .intro {
-    background-color: rgba($bright, .85);
+    background-color: rgba($bright, .9);
     width:50%;
     text-align: center;
     margin: 0 auto 20px auto;
@@ -44,11 +45,27 @@
     margin: 0;
 }
 
+.blur {
+    color: #555;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.blur:hover ~ #home {
+    filter: none;
+    z-index: 5;
+}
+
 /************/
 /*  Mobile  */
 /************/
 
 @media only screen and (max-width: 991px) {
+    .blur { display: none; }
+
     .navbar-collapse {
         position: absolute;
         top: 50px;

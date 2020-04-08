@@ -7,6 +7,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "@gitgraph/react": "^1.5.2",
     "bootstrap": "^4.4.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -18,10 +19,11 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "rstart": "react-scripts start",
+    "prebuild": "rm -rf build/*",
     "build": "webpack --mode production",
+    "postbuild": "purgecss --css build/*.css --content build/index.html build/*.js --out build --whitelist mr-sm-2 navbar-light navbar-nav navbar-expand-lg navbar-toggler-icon",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "purgecss --css build/*.css --content build/index.html build/*.js --out build --whitelist mr-sm-2 navbar-light navbar-nav navbar-expand-lg navbar-toggler-icon"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,7 +55,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "postcss-import": "^12.0.1",
     "postcss-url": "^8.0.0",
     "purgecss-webpack-plugin": "^1.6.0",
